@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Calculadora Básica</h1>
+        <input id="num1" type="number" />
+        <select name="oper" id="oper">
+            <option value="somar">Somar</option>
+            <option value="subtrair">Subtrair</option>
+            <option value="multiplicar">Multiplifcar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <input id="num2" type="number" />
+        <button onclick="calcular()">Calcular</button>
+        <input id="calcular" type="number" readonly />
+        <div id="history">
+         
+        </div>
+    </div>
+   <script>
+       function calcular() {
+            //alert("Click no botão");
+            //console.log("Mensagem click no botao");
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operar = document.getElementById("oper").value;
+            if(operar == "somar"){
+                var result = num1 + num2;
+            }
+            if(operar == "subtrair"){
+                var result = num1 - num2;
+            }
+            if(operar == "multiplicar"){
+                var result = num1 * num2;
+            }
+            if(operar == "dividir"){
+                var result = num1 / num2;
+            }
+            document.getElementById("calcular").value = result;
+            console.log(result);
+            document.getElementById("history").innerHTML += "<h1>" +result +"</h1>";
+        }
+   </script>
+
+</body>
+
+</html>

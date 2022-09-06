@@ -5,22 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
-    <style>
-        .container{
-            width: auto;
-            margin: auto;          
-        }
-        .flex-container{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-    </style>
 </head>
 
 <body class="flex-container">
-
     <div class="container">
         <h1>Calculadora Básica</h1>
         <input id="num1" type="number" />
@@ -36,11 +25,11 @@
     </div>
     <div class="container">
         <h1>Histórico de operações</h1>
-        <div id="history">
+        <div color="#gray" id="history">
         </div>
     </div>
-    <script>
-       function calcular() {
+    <Script>
+        function calcular() {
             //alert("Click no botão");
             //console.log("Mensagem click no botao");
             var num1 = parseFloat(document.getElementById("num1").value);
@@ -62,8 +51,7 @@
             console.log(result);
             document.getElementById("history").innerHTML += "<h1>"+num1 +operar +num2 +"=" +result +"</h1>";
         }
-   </script>
-
+    </Script>
 </body>
 
 </html>
